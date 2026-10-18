@@ -1,0 +1,63 @@
+@import "tailwindcss";
+
+:root {
+  --bg: #ffffff;
+  --text: #0f1419;
+  --muted: #536471;
+  --line: #eff3f4;
+  --blue: #1d9bf0;
+  --hover: rgba(15, 20, 25, 0.03);
+  color-scheme: light;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+  min-height: 100dvh;
+  overflow-x: hidden;
+  background: #ffffff;
+  color: var(--text);
+  font-family: "PingFang SC", "Hiragino Sans GB", "Noto Sans SC", "WenQuanYi Micro Hei",
+    "Microsoft YaHei", sans-serif;
+  touch-action: manipulation;
+}
+
+@media (min-width: 768px) {
+  body {
+    background: #f7f9f9;
+  }
+}
+
+button,
+a {
+  -webkit-tap-highlight-color: transparent;
+}
+
+.poem {
+  font-family: "Songti SC", "Noto Serif SC", "STSong", "PMingLiU", "SimSun", serif;
+}
+
+::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation: none !important;
+    transition: none !important;
+  }
+}
