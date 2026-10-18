@@ -24,6 +24,7 @@ export const viewport: Viewport = {
   initialScale: 1,
   viewportFit: "cover",
   themeColor: "#ffffff",
+  colorScheme: "light",
 };
 
 export default function RootLayout({
@@ -32,8 +33,12 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="zh-CN">
-      <body className="antialiased">{children}</body>
+    <html lang="zh-CN" style={{ colorScheme: "light", backgroundColor: "#ffffff", color: "#0f1419" }}>
+      <head>
+        <meta name="color-scheme" content="light" />
+        <meta name="nightmode" content="disable" />
+      </head>
+      <body style={{ backgroundColor: "#ffffff", color: "#0f1419" }}>{children}</body>
     </html>
   );
 }
